@@ -6,8 +6,9 @@ USER root
 RUN apt-get update && apt-get install -y supervisor wget unzip
 
 ENV UUID de04add9-5c68-8bab-950c-08cd5320df18
-ENV VMESS_WSPATH /vmess
-ENV VLESS_WSPATH /vless
+ENV VMESS_WSPATH /vm
+ENV VLESS_WSPATH /vl
+ENV TROJAN_WSPATH /tr
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY nginx.conf /etc/nginx/nginx.conf
